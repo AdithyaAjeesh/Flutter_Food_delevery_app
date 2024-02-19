@@ -26,7 +26,9 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(Icons.search),
             ),
           ),
-          CarouselSliderWidget(),
+          CarouselSliderWidget(
+            scrollDelay: 4,
+          ),
           Padding(
             padding: EdgeInsets.only(top: 20, left: 20, bottom: 20),
             child: Text(
@@ -49,6 +51,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           PopularWidget(),
+          CarouselSliderWidget(scrollDelay: 3),
         ],
       ),
     );

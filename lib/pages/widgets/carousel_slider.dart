@@ -4,7 +4,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class CarouselSliderWidget extends StatefulWidget {
-  const CarouselSliderWidget({super.key});
+  final int scrollDelay;
+  const CarouselSliderWidget({
+    super.key,
+    required this.scrollDelay,
+  });
 
   @override
   State<CarouselSliderWidget> createState() => _CarouselSliderWidgetState();
@@ -37,7 +41,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
         autoPlay: true,
         viewportFraction: 1,
         enableInfiniteScroll: true,
-        autoPlayInterval: const Duration(seconds: 4),
+        autoPlayInterval: Duration(seconds: widget.scrollDelay),
         autoPlayAnimationDuration: const Duration(seconds: 1),
         scrollDirection: Axis.horizontal,
         onPageChanged: (index, reason) {

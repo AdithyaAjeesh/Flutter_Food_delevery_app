@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_online_store/pages/cart/cart.dart';
 import 'package:flutter_online_store/pages/home_page/home_page.dart';
 import 'package:flutter_online_store/pages/products_page/shopping_page.dart';
+import 'package:flutter_online_store/pages/setting_page/setting_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -14,6 +16,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final screens = [
     const HomePage(),
     const ShoppingPage(),
+    const CartPage(),
+    const SettingPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,6 +36,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_bag_outlined),
             label: 'Bag',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
         showSelectedLabels: true,
